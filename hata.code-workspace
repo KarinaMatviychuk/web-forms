@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"name": "hata",
+			"path": "../hata"
+		},
+		{
+			"name": "football",
+			"path": "../football"
+		},
+		{
+			"name": "table 1",
+			"path": "../../../Downloads/table 1"
+		},
+		{
+			"name": "vs code",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "vs code"
+	}
+}
