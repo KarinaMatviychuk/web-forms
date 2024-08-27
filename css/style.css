@@ -4,30 +4,6 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: 'Roboto Slab';
-    src: url('../fonts/RobotoSlab-Bold.eot');
-    src: url('../fonts/RobotoSlab-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/RobotoSlab-Bold.woff2') format('woff2'),
-        url('../fonts/RobotoSlab-Bold.woff') format('woff'),
-        url('../fonts/RobotoSlab-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Bold.eot');
-    src: url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Roboto-Bold.woff2') format('woff2'),
-        url('../fonts/Roboto-Bold.woff') format('woff'),
-        url('../fonts/Roboto-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
 .wrapper {
     margin: 0 auto;
     width: 80%;
@@ -96,6 +72,46 @@ input[type="submit"]:hover {
     background-color: #07be51;
 }
 
+.simple-form,
+.registration,
+.form-table {
+    position: relative;
+    display: inline-block;
+}
+
+select {
+    appearance: none;
+    cursor: text;
+}
+
+.simple-form::after,
+.registration::after,
+.form-table::after {
+    content: "";
+    position: absolute;
+    transform: translateY(-50%);
+    width: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #1f222c;
+}
+
+.simple-form::after {
+    top: 47.5%;
+    right: 10px;
+}
+
+.registration::after {
+    top: 37%;
+    left: 75%;
+}
+
+.form-table::after {
+    top: 50.5%;
+    left: 29.5%;
+}
+
+
 .elements {
     display: flex;
     justify-content: space-between;
@@ -106,6 +122,13 @@ input[type="submit"]:hover {
     display: flex;
     justify-content: space-between;
     width: 40%;
+}
+
+.choice p {
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
 }
 
 .radios {
@@ -225,7 +248,10 @@ td.status-block {
     display: flex;
     align-items: center;
     column-gap: 3px;
-    color: #000;
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
 }
 
 .block input[type="date"] {
@@ -240,7 +266,7 @@ td.status-block {
     column-gap: 30%;
 }
 
-.gender-photo p{
+.gender-photo p {
     position: relative;
     padding: 30px; 
 }
@@ -286,15 +312,15 @@ p.male label::before {
 }
 
 p.male label::after {
-    background-position: 0 -73.5px;  
+    background-position: 0 -74px;  
 }
 
 p.female label::before {
-    background-position: -74px 0;
+    background-position: -74.5px 0;
 }
 
 p.female label::after {
-    background-position: -74px -74px;
+    background-position: -74.5px -74px;
 }
 
 .move-checkbox p {
@@ -422,6 +448,18 @@ th {
 button {
     margin: 30px 0;
     padding: 10px 25px;  
+    background-color: #fff;
+    border: 1px solid #84868d;
+    color: #6e6f77;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Roboto";
+}
+
+button:hover {
+    background-color: #85868d;
+    color: #fff;
+    cursor: pointer;
 }
 
 .button [type="submit"] {
@@ -488,6 +526,13 @@ a:hover {
     color: #000;
 }
 
+.fixed a {
+    font-size: 13px;
+    color: #3e6aff;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
 .fixed input[type="checkbox"] {
     margin-left: 0;
 }
@@ -514,7 +559,43 @@ hr {
 select:focus,
 textarea:focus {
     outline: none;
-    box-shadow: 0px -1px 4px 2px rgba(62,106,255,1);
+    box-shadow: 0 0 5px rgba(62,106,255);
 }
 
+input::placeholder,
+textarea::placeholder,
+.disabled label {
+    font-size: 14px;
+    color: #b3b3b3;
+    font-weight: 400;
+    font-family: "Roboto";
+}
 
+.move-checkbox p,
+.registration tr td:first-child,
+.registration input[type="radio"]+label,
+.agree p {
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+td label,
+.fixed label {
+    font-size: 13px;
+    color: #b3b3b3;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+input[type="submit"] {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    font-family: "Roboto";
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+}
